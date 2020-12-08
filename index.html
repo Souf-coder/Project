@@ -1,13 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Multiplication Table</title>
-  </head>
-  <body>
-    <p>This is my Multiplication Table</p>
-    <script type="text/javascript" src="index.js">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+
+  
+</head>
+<body>
+  <div id="shops">
+    <div class="cont2">
+        <h1>Votre liste d'achat</h1>
+    <ul id="list" >
+
+    </ul>
+    </div>
+  </div>
+    <script>
+    const list = document.getElementById('list');
+    const achat = [];
+
+    let nonull = true;
+
+    while( nonull )
+    {
+        let articles = prompt("Vos produits:")
+     if(articles !== 'Exit')
+     {
+         achat.push(articles)
+    
+     }
+     else
+     {
+       nonull = false;
+     }
+
+    }
+   achat.forEach(affichage);
+
+   function affichage(item)
+   {
+    list.innerHTML += `<li id="listeshop">`+ item +`</li>`;
+   }
 
     </script>
-  </body>
+    
+</body>
 </html>
